@@ -1,0 +1,7 @@
+<%= simple_form for @list @bookmark do |f| %>
+  <%= f.collection :movie_id, Movie.order(:title),:id,:title %>
+  <%= f.input :content, %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "wanna go back to your list?", lists_path %>
